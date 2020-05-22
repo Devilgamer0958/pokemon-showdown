@@ -305,8 +305,6 @@ const Formats = [
 		ruleset: ['VGC Timer'],
 		minSourceGen: 8,
 	},
-		minSourceGen: 8,
-	},
 	{
 		name: "[Gen 8] 2v2 Doubles",
 		desc: `Double battle where you bring four Pok&eacute;mon to Team Preview and choose only two.`,
