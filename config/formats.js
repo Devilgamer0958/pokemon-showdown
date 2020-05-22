@@ -302,11 +302,9 @@ const Formats = [
 			validate: [4, 6],
 			battle: 4,
 		},
-		ruleset: ['Standard GBU', 'VGC Timer'],
-		banlist: [
-			// Can't obtain in Galar without transferring
-			'Cobalion', 'Raichu-Alola', 'Terrakion', 'Virizion', 'Weezing-Base',
-		],
+		ruleset: ['VGC Timer'],
+		minSourceGen: 8,
+	},
 		minSourceGen: 8,
 	},
 	{
@@ -453,11 +451,8 @@ const Formats = [
 
 		mod: 'gen8',
 		// searchShow: false,
-		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: [
-			'Darmanitan-Galar', 'Eternatus', 'Hydreigon', 'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Lunala', 'Marshadow', 'Melmetal', 'Mewtwo',
-			'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Reshiram', 'Shedinja', 'Solgaleo', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora',
-			'Arena Trap', 'Moody', 'Shadow Tag', 'Baton Pass',
+		ruleset: ['Standard NatDex', 'Species Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		banlist: ['Arena Trap', 'Moody', 'Shadow Tag', 'Baton Pass',
 		],
 		onModifySpecies(species, target, source, effect) {
 			if (!target) return; // Chat command
@@ -551,12 +546,10 @@ const Formats = [
 		],
 
 		mod: 'mixandmega',
-		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: [
-			'Eternatus', 'Lunala', 'Zacian', 'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify',
-			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
+		ruleset: ['Standard NatDex', 'Species Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		banlist: ['Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 		],
-		restricted: ['Gengar', 'Kyurem-Black', 'Kyurem-White', 'Marshadow', 'Melmetal', 'Mewtwo', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Reshiram', 'Solgaleo', 'Zamazenta', 'Zekrom', 'Zeraora'],
+		restricted: ['Gible'],
 		onValidateTeam(team, format) {
 			const restrictedPokemon = format.restricted || [];
 			/**@type {{[k: string]: true}} */
@@ -607,11 +600,8 @@ const Formats = [
 		],
 
 		mod: 'gen8',
-		ruleset: ['Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
-		banlist: [
-			'Dracovish', 'Dragapult', 'Eternatus', 'Keldeo', 'Kyurem-Black', 'Kyurem-White', 'Lunala', 'Marshadow', 'Melmetal', 'Mewtwo',
-			'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Reshiram', 'Shedinja', 'Solgaleo', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora',
-			'Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
+		ruleset: ['Standard NatDex', '!Obtainable Abilities', 'Species Clause', '2 Ability Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		banlist: ['Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
 			'Libero', 'Moody', 'Neutralizing Gas', 'Parental Bond', 'Protean', 'Pure Power', 'Shadow Tag', 'Simple', 'Stakeout', 'Speed Boost', 'Water Bubble', 'Wonder Guard',
 			'Baton Pass',
 		],
@@ -625,11 +615,8 @@ const Formats = [
 		],
 
 		mod: 'gen8',
-		ruleset: ['Standard', 'STABmons Move Legality', 'Dynamax Clause'],
-		banlist: [
-			'Darmanitan', 'Darmanitan-Galar', 'Dragapult', 'Eternatus', 'Kyurem-Black', 'Kyurem-White', 'Lunala', 'Marshadow',
-			'Mewtwo', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Reshiram', 'Silvally', 'Solgaleo', 'Zacian', 'Zamazenta', 'Zekrom',
-			'King\'s Rock', 'Moody', 'Shadow Tag', 'Baton Pass',
+		ruleset: ['Standard', 'STABmons Move Legality'],
+		banlist: ['King\'s Rock', 'Moody', 'Shadow Tag', 'Baton Pass',
 		],
 		restricted: ['Acupressure', 'Belly Drum', 'Bolt Beak', 'Double Iron Bash', 'Electrify', 'Extreme Speed', 'Fishious Rend', 'Shell Smash', 'Shift Gear', 'Spore'],
 	},
@@ -668,11 +655,8 @@ const Formats = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['Standard', 'Dynamax Clause'],
-		banlist: [
-			'Darmanitan-Galar', 'Eternatus', 'Kyurem-Black', 'Kyurem-White', 'Lunala', 'Marshadow', 'Melmetal',
-			'Mewtwo', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Reshiram', 'Shedinja', 'Solgaleo', 'Toxapex',
-			'Zacian', 'Zamazenta', 'Zekrom', 'Leppa Berry', 'Baton Pass',
+		ruleset: ['Standard NatDex'],
+		banlist: ['Leppa Berry',
 			'Arena Trap', 'Contrary', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Electric Surge ++ Surge Surfer',
 			'Flare Boost', 'Fur Coat', 'Guts', 'Huge Power', 'Imposter', 'Innards Out', 'Magic Bounce', 'Magic Guard',
 			'Mirror Armor', 'Mold Breaker', 'Moody', 'Neutralizing Gas', 'Regenerator ++ Emergency Exit',
@@ -735,19 +719,20 @@ const Formats = [
 	},
 	{
 		name: "[Gen 8] Tier Shift",
-		desc: `Pok&eacute;mon below OU get all their stats boosted. UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.`,
+		desc: `Pok&eacute;mon below OU get all their stats boosted. Ubers get -10, UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.`,
 		threads: [
 			//`&bullet; <a href="https://www.smogon.com/forums/threads/3610073/">Tier Shift</a>`,
 		],
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] OU', '-Melmetal'],
+		ruleset: ['Standard NatDex'],
 		banlist: ['Damp Rock', 'Heat Rock'],
 		onModifySpecies(species, target, source, effect) {
 			if (!species.baseStats) return false;
 			/** @type {{[tier: string]: number}} */
 			const boosts = {
+				'Uber':-10,
 				'UU': 10,
 				'RUBL': 10,
 				'RU': 20,
