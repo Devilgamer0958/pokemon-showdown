@@ -282,7 +282,7 @@ const Formats = [
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3658504/">Doubles UU Metagame Discussion</a>`,
 		],
-//hi
+			//hi
 		mod: 'gen8',
 		gameType: 'doubles',
 		ruleset: ['[Gen 8] Doubles OU'],
@@ -730,7 +730,7 @@ const Formats = [
 			if (!species.baseStats) return false;
 			/** @type {{[tier: string]: number}} */
 			const boosts = {
-				'Uber':-10,
+				'Uber': -10,
 				'UU': 10,
 				'RUBL': 10,
 				'RU': 20,
