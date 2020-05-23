@@ -597,7 +597,7 @@ const Formats = [
 		],
 
 		mod: 'gen8',
-		ruleset: ['Standard NatDex', '!Obtainable Abilities', 'Species Clause', '2 Ability Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		ruleset: ['Standard NatDex', '!Obtainable Abilities', 'Species Clause', '2 Ability Clause'],
 		banlist: ['Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
 			'Libero', 'Moody', 'Neutralizing Gas', 'Parental Bond', 'Protean', 'Pure Power', 'Shadow Tag', 'Simple', 'Stakeout', 'Speed Boost', 'Water Bubble', 'Wonder Guard',
 			'Baton Pass',
