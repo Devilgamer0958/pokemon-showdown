@@ -449,7 +449,7 @@ const Formats = [
 
 		mod: 'gen8',
 		// searchShow: false,
-		ruleset: ['Standard NatDex', 'Species Clause'],
+		ruleset: ['Standard NatDex'],
 		banlist: ['Arena Trap', 'Moody', 'Shadow Tag', 'Baton Pass',
 		],
 		onModifySpecies(species, target, source, effect) {
