@@ -554,9 +554,6 @@ const Formats = [
 			const itemTable = {};
 			for (const set of team) {
 				const item = this.dex.getItem(set.item);
-				if (!item || !item.megaStone) continue;
-				const species = this.dex.getSpecies(set.species);
-				if (species.isNonstandard) return [`${species.baseSpecies} does not exist in gen 8.`];
 				if (restrictedPokemon.includes(species.name)) {
 					return [`${species.name} is not allowed to hold ${item.name}.`];
 				}
