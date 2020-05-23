@@ -449,7 +449,7 @@ const Formats = [
 
 		mod: 'gen8',
 		// searchShow: false,
-		ruleset: ['Standard NatDex'],
+		ruleset: ['Standard NatDex', 'Species Clause'],
 		banlist: ['Arena Trap', 'Moody', 'Shadow Tag', 'Baton Pass',
 		],
 		onModifySpecies(species, target, source, effect) {
@@ -544,7 +544,7 @@ const Formats = [
 		],
 
 		mod: 'mixandmega',
-		ruleset: ['Standard NatDex', 'Species Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		ruleset: ['Standard NatDex', 'Species Clause'],
 		banlist: ['Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 		],
 		restricted: ['Skiploom'],
@@ -613,7 +613,7 @@ const Formats = [
 		],
 
 		mod: 'gen8',
-		ruleset: ['Standard', 'STABmons Move Legality'],
+		ruleset: ['Standard NatDex', 'STABmons Move Legality', 'Species Clause'],
 		banlist: ['King\'s Rock', 'Moody', 'Shadow Tag', 'Baton Pass',
 		],
 		restricted: ['Acupressure', 'Belly Drum', 'Bolt Beak', 'Double Iron Bash', 'Electrify', 'Extreme Speed', 'Fishious Rend', 'Shell Smash', 'Shift Gear', 'Spore'],
