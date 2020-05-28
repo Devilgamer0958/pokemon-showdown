@@ -21,7 +21,8 @@ export const BattleScripts: ModdedBattleScriptsData = {
 	runMegaEvo(pokemon) {
 		if (pokemon.species.isMega) return false;
 		},
-		if (pokemon.item) = 'blueorb': {
+
+		if (pokemon.item === 'blueorb' : {
 			onSwitchIn: function (pokemon) {
 				if (pokemon.isActive && !pokemon.template.isPrimal) {
 					this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
@@ -42,7 +43,8 @@ export const BattleScripts: ModdedBattleScriptsData = {
 			onTakeItem: function (item) {
 				return false;
 			},
-		if (pokemon.item) = 'redorb': {
+		},
+		if (pokemon.item === 'redorb': {
 			onSwitchIn: function (pokemon) {
 				if (pokemon.isActive && !pokemon.template.isPrimal) {
 					this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
