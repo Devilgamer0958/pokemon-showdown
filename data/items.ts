@@ -553,6 +553,8 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (source.baseSpecies.baseSpecies === 'Kyogre') return false;
 			return true;
 		},
+		megaStone: "Kyogre-Primal",
+		megaEvolves: "Kyogre",
 		itemUser: ["Kyogre"],
 		num: 535,
 		gen: 6,
@@ -4778,6 +4780,8 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			if (source.baseSpecies.baseSpecies === 'Groudon') return false;
 			return true;
 		},
+		megaStone: "Groudon-Primal",
+		megaEvolves: "Groudon",
 		itemUser: ["Groudon"],
 		num: 534,
 		gen: 6,
