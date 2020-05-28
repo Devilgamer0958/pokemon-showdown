@@ -23,12 +23,12 @@ export const BattleScripts: ModdedBattleScriptsData = {
 		},
 
 		if (pokemon.hasItem ('blueorb')) {
-			onSwitchIn: function (pokemon) {
-				if (pokemon.isActive && !pokemon.template.isPrimal) {
-					this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
-				}
-			},
-			onPrimal: function (pokemon) {
+			onSwitchIn(pokemon) {
+		if (pokemon.isActive && pokemon.baseSpecies.name === 'Kyogre') {
+			this.queue.insertChoice({choice: 'runPrimal', pokemon: pokemon});
+		 }
+	 },
+			onPrimal: (pokemon) {
 				/**@type {Template} */
 				// @ts-ignore
 				let template = this.getMixedTemplate(pokemon.originalSpecies, 'Kyogre-Primal');
@@ -44,12 +44,12 @@ export const BattleScripts: ModdedBattleScriptsData = {
 				return false;
 			},
 		},
-		if pokemon.hasItem('redorb') : {
-			onSwitchIn: function (pokemon) {
-				if (pokemon.isActive && !pokemon.template.isPrimal) {
-					this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
-				}
-			},
+		if (pokemon.hasItem ('redorb')) {
+			onSwitchIn(pokemon) {
+		if (pokemon.isActive && pokemon.baseSpecies.name === 'Groudon') {
+			this.queue.insertChoice({choice: 'runPrimal', pokemon: pokemon});
+		 }
+	 },
 			onPrimal: function (pokemon) {
 				/**@type {Template} */
 				// @ts-ignore
