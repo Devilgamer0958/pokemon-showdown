@@ -1,6 +1,6 @@
-'use strict';
 
-/**@type {ModdedBattleScriptsData} */
+
+/** @type {ModdedBattleScriptsData} */
 let BattleScripts = {
 	gen: 8,
 	init: function () {
@@ -42,11 +42,11 @@ let BattleScripts = {
 		if (this.getTemplate(pokemon.canMegaEvo).baseSpecies === pokemon.originalSpecies) {
 			pokemon.formeChange(template, pokemon.getItem(), true);
 		} else {
-			let oTemplate = this.getTemplate(pokemon.originalSpecies);
-			let oMegaTemplate = this.getTemplate(template.originalMega);
+			let Template = this.getTemplate(pokemon.originalSpecies);
+			let MegaTemplate = this.getTemplate(template.originalMega);
 			pokemon.formeChange(template, pokemon.getItem(), true);
-			this.add('-start', pokemon, oMegaTemplate.requiredItem || oMegaTemplate.requiredMove, '[silent]');
-			if (oTemplate.types.length !== pokemon.template.types.length || oTemplate.types[1] !== pokemon.template.types[1]) {
+			this.add('-start', pokemon, MegaTemplate.requiredItem || MegaTemplate.requiredMove, '[silent]');
+			if (Template.types.length !== pokemon.template.types.length || Template.types[1] !== pokemon.template.types[1]) {
 				this.add('-start', pokemon, 'typechange', pokemon.template.types.join('/'), '[silent]');
 			}
 		}
@@ -113,5 +113,3 @@ let BattleScripts = {
 		return template;
 	},
 };
-
-exports.BattleScripts = BattleScripts;
