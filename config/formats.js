@@ -543,7 +543,7 @@ const Formats = [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3659028/">M&amp;M Resources</a>`,
 		],
 
-		mod: 'mixandmega6',
+		mod: 'mixandmega',
 		ruleset: ['Standard NatDex', 'Species Clause', 'Dynamax Clause'],
 		banlist: ['Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 		],
