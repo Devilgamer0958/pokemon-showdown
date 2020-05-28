@@ -7,6 +7,14 @@ export const BattleItems: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	blueorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	redorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	aerodactylite: {
 		inherit: true,
 		isNonstandard: null,
