@@ -22,7 +22,7 @@ export const BattleScripts: ModdedBattleScriptsData = {
 		if (pokemon.species.isMega) return false;
 		},
 
-		if pokemon.hasItem('blueorb') : {
+		if (pokemon.hasItem ('blueorb')) {
 			onSwitchIn: function (pokemon) {
 				if (pokemon.isActive && !pokemon.template.isPrimal) {
 					this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
