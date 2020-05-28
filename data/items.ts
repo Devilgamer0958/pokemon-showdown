@@ -554,7 +554,6 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			return true;
 		},
 		megaStone: "Kyogre-Primal",
-		megaEvolves: "Kyogre",
 		itemUser: ["Kyogre"],
 		num: 535,
 		gen: 6,
@@ -4781,7 +4780,6 @@ export const BattleItems: {[itemid: string]: ItemData} = {
 			return true;
 		},
 		megaStone: "Groudon-Primal",
-		megaEvolves: "Groudon",
 		itemUser: ["Groudon"],
 		num: 534,
 		gen: 6,
