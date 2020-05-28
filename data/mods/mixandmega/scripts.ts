@@ -22,7 +22,7 @@ export const BattleScripts: ModdedBattleScriptsData = {
 		if (pokemon.species.isMega) return false;
 		},
 
-		if (pokemon,Item) === ('blueorb') : {
+		if pokemon.hasItem('blueorb') : {
 			onSwitchIn: function (pokemon) {
 				if (pokemon.isActive && !pokemon.template.isPrimal) {
 					this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
@@ -44,7 +44,7 @@ export const BattleScripts: ModdedBattleScriptsData = {
 				return false;
 			},
 		},
-		if (pokemon,Item) === 'redorb': {
+		if pokemon.hasItem('redorb') : {
 			onSwitchIn: function (pokemon) {
 				if (pokemon.isActive && !pokemon.template.isPrimal) {
 					this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
