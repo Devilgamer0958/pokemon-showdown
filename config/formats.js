@@ -544,7 +544,7 @@ const Formats = [
 		],
 
 		mod: 'mixandmega',
-		ruleset: ['Standard NatDex', 'Species Clause'],
+		ruleset: ['Standard NatDex', 'Species Clause', 'Dynamax Clause'],
 		banlist: ['Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 		],
 		restricted: ['Skiploom'],
