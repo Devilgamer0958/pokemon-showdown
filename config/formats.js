@@ -651,7 +651,8 @@ const Formats = [
 		],
 
 		mod: 'gen8',
-		ruleset: ['Standard NatDex', '+Unobtainable Moves'],
+		searchShow: false,
+		ruleset: ['Standard NatDex', '+ Unobtainable Moves'],
 		banlist: ['Leppa Berry',
 			'Arena Trap', 'Contrary', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Electric Surge ++ Surge Surfer',
 			'Flare Boost', 'Fur Coat', 'Guts', 'Huge Power', 'Imposter', 'Innards Out', 'Magic Bounce', 'Magic Guard',
