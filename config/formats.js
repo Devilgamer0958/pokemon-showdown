@@ -651,7 +651,6 @@ const Formats = [
 		],
 
 		mod: 'gen8',
-		searchShow: false,
 		ruleset: ['Standard NatDex'],
 		banlist: ['Leppa Berry',
 			'Arena Trap', 'Contrary', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Electric Surge ++ Surge Surfer',
