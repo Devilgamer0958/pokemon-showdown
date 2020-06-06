@@ -659,7 +659,7 @@ const Formats = [
 			'Mirror Armor', 'Mold Breaker', 'Moody', 'Neutralizing Gas', 'Regenerator ++ Emergency Exit',
 			'Regenerator ++ Wimp Out', 'Sand Rush', 'Sand Veil', 'Shadow Tag', 'Simple', 'Slush Rush', 'Snow Cloak',
 			'Speed Boost', 'Steelworker ++ Steely Spirit', 'Tinted Lens', 'Trace', 'Unaware', 'Unburden', 'Water Bubble',
-			'No Guard ++ Horn Drill', 'No Guard ++ Sheer Cold', 'No Guard ++ Guillotine', 'No Guard ++ Fissure'
+			'No Guard ++ Horn Drill', 'No Guard ++ Sheer Cold', 'No Guard ++ Guillotine', 'No Guard ++ Fissure',
 		],
 		/** @param {Pokemon} pokemon */
 		// @ts-ignore
