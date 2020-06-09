@@ -40548,8 +40548,8 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 		learnset: {
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			agility: ["7L55", "6L55", "5L73", "4L73", "3L35"],
-	 	  nastyplot: ["7L55", "6L55", "5L73", "4L73", "3L35"],
-	 		allyswitch: ["7T", "5M"],
+			nastyplot: ["7L55", "6L55", "5L73", "4L73", "3L35"],
+			allyswitch: ["7T", "5M"],
 			amnesia: ["7L55", "6L55", "5L73", "4L73", "3L35"],
 			avalanche: ["4M"],
 			bind: ["7T", "6T", "5T"],
