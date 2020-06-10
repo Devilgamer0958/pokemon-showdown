@@ -63654,7 +63654,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 			hypervoice: ["7T", "6T"],
 			knockoff: ["7T", "6T"],
 			laserfocus: ["7T"],
-			oblivionwing: ["7L26", "7S4", "7S3", "7S2", "6L26", "6S1", "6S0"],
+			oblivionwing: ["8L0", "7L26", "7S4", "7S3", "7S2", "6L26", "6S1", "6S0"],
 			phantomforce: ["7L55", "7S3", "7S2", "6L55"],
 			protect: ["7M", "6M"],
 			psychic: ["7M", "7L59", "7S3", "7S2", "6M", "6L59"],
