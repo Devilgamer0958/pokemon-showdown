@@ -730,17 +730,17 @@ const Formats = [
 			if (!species.baseStats) return false;
 			/** @type {{[tier: string]: number}} */
 			const boosts = {
-				'Uber': -10,
-				'UU': 10,
-				'RUBL': 10,
-				'RU': 20,
-				'NUBL': 20,
-				'NU': 30,
-				'PUBL': 30,
-				'PU': 40,
-				'NFE': 40,
-				'LC Uber': 40,
-				'LC': 40,
+				'NatDex Uber': -10,
+				'NatDex UU': 10,
+				'NatDex RUBL': 10,
+				'NatDex RU': 20,
+				'NatDex NUBL': 20,
+				'NatDex NU': 30,
+				'NatDex PUBL': 30,
+				'NatDex PU': 40,
+				'NatDex NFE': 40,
+				'NatDex LC Uber': 40,
+				'NatDex LC': 40,
 			};
 			let tier = species.tier || 'OU';
 			if (tier[0] === '(') tier = tier.slice(1, -1);
