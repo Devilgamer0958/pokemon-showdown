@@ -725,7 +725,7 @@ const Formats = [
 		mod: 'gen8',
 		searchShow: false,
 		ruleset: ['Standard NatDex'],
-		banlist: ['Damp Rock', 'Heat Rock'],
+		banlist: ['Damp Rock', 'Heat Rock', 'Eviolite'],
 		onModifySpecies(species, target, source, effect) {
 			if (!species.baseStats) return false;
 			/** @type {{[tier: string]: number}} */
