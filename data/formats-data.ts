@@ -385,7 +385,6 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	meowthgmax: {
-		unreleasedHidden: true,
 		tier: "(Uber)",
 		doublesTier: "(DUber)",
 	},
@@ -545,7 +544,6 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Unreleased",
 	},
 	slowpokegalar: {
-		unreleasedHidden: true,
 		tier: "PU",
 		doublesTier: "(DUU)",
 	},
@@ -3746,11 +3744,9 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	pumpkaboosmall: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	pumpkaboolarge: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	pumpkaboosuper: {
@@ -3765,14 +3761,12 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 	gourgeistsmall: {
 		randomBattleMoves: ["leechseed", "powerwhip", "shadowsneak", "substitute", "willowisp"],
 		randomDoubleBattleMoves: ["destinybond", "disable", "foulplay", "leechseed", "painsplit", "powerwhip", "willowisp"],
-		unreleasedHidden: true,
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	gourgeistlarge: {
 		randomBattleMoves: ["leechseed", "powerwhip", "shadowsneak", "substitute", "willowisp"],
 		randomDoubleBattleMoves: ["powerwhip", "protect", "shadowclaw", "shadowsneak", "synthesis", "trickroom"],
-		unreleasedHidden: true,
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
@@ -4444,58 +4438,47 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Unreleased",
 	},
 	grookey: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	thwackey: {
-		unreleasedHidden: true,
 		tier: "NFE",
 	},
 	rillaboom: {
 		randomBattleMoves: ["bulkup", "drumbeating", "highhorsepower", "knockoff", "substitute", "uturn", "woodhammer"],
 		randomDoubleBattleMoves: ["drumbeating", "fakeout", "highhorsepower", "superpower", "swordsdance", "uturn"],
-		unreleasedHidden: true,
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	scorbunny: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	raboot: {
-		unreleasedHidden: true,
 		tier: "NFE",
 	},
 	cinderace: {
 		randomBattleMoves: ["courtchange", "gunkshot", "highjumpkick", "pyroball", "uturn", "zenheadbutt"],
 		randomDoubleBattleMoves: ["courtchange", "gunkshot", "highjumpkick", "ironhead", "protect", "pyroball", "uturn", "zenheadbutt"],
-		unreleasedHidden: true,
 		tier: "OU",
 		doublesTier: "DUU",
 	},
 	sobble: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	drizzile: {
-		unreleasedHidden: true,
 		tier: "NFE",
 	},
 	inteleon: {
 		randomBattleMoves: ["airslash", "darkpulse", "hydropump", "icebeam", "scald", "uturn"],
 		randomDoubleBattleMoves: ["airslash", "hydropump", "icebeam", "muddywater", "shadowball", "uturn"],
-		unreleasedHidden: true,
 		tier: "RUBL",
 		doublesTier: "DUU",
 	},
 	skwovet: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	greedent: {
 		randomBattleMoves: ["bodyslam", "earthquake", "firefang", "payback", "swordsdance"],
 		randomDoubleBattleMoves: ["bodyslam", "crunch", "earthquake", "gyroball", "protect", "swordsdance"],
-		unreleasedHidden: true,
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
@@ -4532,13 +4515,11 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUber)",
 	},
 	nickit: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	thievul: {
 		randomBattleMoves: ["darkpulse", "foulplay", "grassknot", "nastyplot", "partingshot", "psychic"],
 		randomDoubleBattleMoves: ["faketears", "foulplay", "partingshot", "snarl", "taunt"],
-		unreleasedHidden: true,
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
@@ -4552,13 +4533,11 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	wooloo: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	dubwool: {
 		randomBattleMoves: ["bodypress", "cottonguard", "rest", "sleeptalk"],
 		randomDoubleBattleMoves: ["doubleedge", "protect", "swordsdance", "thunderwave", "wildcharge", "zenheadbutt"],
-		unreleasedHidden: true,
 		tier: "PU",
 		doublesTier: "(DUU)",
 	},
@@ -4576,13 +4555,11 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUber)",
 	},
 	yamper: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	boltund: {
 		randomBattleMoves: ["bulkup", "crunch", "firefang", "playrough", "psychicfangs", "thunderfang", "voltswitch"],
 		randomDoubleBattleMoves: ["crunch", "firefang", "nuzzle", "playrough", "protect", "psychicfangs", "snarl", "thunderfang"],
-		unreleasedHidden: true,
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
@@ -4705,7 +4682,6 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	sinisteaantique: {
-		unreleasedHidden: true,
 		tier: "LC",
 	},
 	polteageist: {
@@ -4715,7 +4691,6 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	polteageistantique: {
-		unreleasedHidden: true,
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
@@ -4834,28 +4809,24 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 	dracozolt: {
 		randomBattleMoves: ["aerialace", "boltbeak", "earthquake", "lowkick", "outrage"],
 		randomDoubleBattleMoves: ["aerialace", "boltbeak", "dragonclaw", "highhorsepower", "rockslide"],
-		unreleasedHidden: true,
 		tier: "UUBL",
 		doublesTier: "(DUU)",
 	},
 	arctozolt: {
 		randomBattleMoves: ["bodyslam", "boltbeak", "freezedry", "iciclecrash", "lowkick"],
 		randomDoubleBattleMoves: ["blizzard", "boltbeak", "iciclecrash", "lowkick", "protect"],
-		unreleasedHidden: true,
 		tier: "PUBL",
 		doublesTier: "(DUU)",
 	},
 	dracovish: {
 		randomBattleMoves: ["crunch", "fishiousrend", "icefang", "lowkick", "psychicfangs"],
 		randomDoubleBattleMoves: ["crunch", "dragonrush", "fishiousrend", "icefang", "psychicfangs"],
-		unreleasedHidden: true,
 		tier: "OU",
 		doublesTier: "DOU",
 	},
 	arctovish: {
 		randomBattleMoves: ["bodyslam", "fishiousrend", "freezedry", "iciclecrash", "psychicfangs"],
 		randomDoubleBattleMoves: ["blizzard", "bodyslam", "fishiousrend", "iciclecrash", "protect", "psychicfangs"],
-		unreleasedHidden: true,
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
