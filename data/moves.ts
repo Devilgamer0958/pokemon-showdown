@@ -3810,7 +3810,6 @@ export const BattleMovedex: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
 		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
-		isNonstandard: 'Past',
 		name: "Dragon Ascent",
 		pp: 5,
 		priority: 0,
