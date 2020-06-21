@@ -302,7 +302,7 @@ const Formats = [
 			validate: [4, 6],
 			battle: 4,
 		},
-		ruleset: ['VGC Timer'],
+		ruleset: ['VGC Timer', 'Team Preview'],
 		minSourceGen: 8,
 	},
 	{
