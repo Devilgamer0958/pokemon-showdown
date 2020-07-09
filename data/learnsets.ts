@@ -19573,6 +19573,7 @@ export const BattleLearnsets: {[speciesid: string]: LearnsetData} = {
 		learnset: {
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			agility: ["8V", "7L43", "7V", "6L43", "6S6", "6S5", "5L43", "4L43", "4S4", "4S3", "3L25", "3S1", "3S0"],
+			airslash: ["8V", "7L43", "7V", "6L43", "6S6", "6S5", "5L43", "4L43", "4S4", "4S3", "3L25", "3S1", "3S0"],
 			aircutter: ["4T"],
 			ancientpower: ["7L29", "7S7", "6L29", "5L29", "4T", "4L29"],
 			batonpass: ["3S2"],
