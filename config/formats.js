@@ -50,10 +50,11 @@ const Formats = [
 		},
 	},
 	{
-		name: "[Gen 8] OU (Blitz)",
+		name: "[Gen 8] Triples",
 
 		mod: 'gen8',
-		ruleset: ['[Gen 8] OU', 'Blitz'],
+		ruleset: ['StandardNatDex'],
+		gameType: ['triples']
 	},
 	{
 		name: "[Gen 8] Ubers",
