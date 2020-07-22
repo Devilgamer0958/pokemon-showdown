@@ -54,7 +54,7 @@ const Formats = [
 
 		mod: 'gen8',
 		ruleset: ['StandardNatDex'],
-		gameType: ['triples']
+		gameType: ['triples'],
 	},
 	{
 		name: "[Gen 8] Ubers",
