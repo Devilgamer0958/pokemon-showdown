@@ -3,11 +3,11 @@
 import {TeamData} from '../../random-teams';
 import RandomGen7Teams from '../gen7/random-teams';
 import {PRNG, PRNGSeed} from '../../../sim/prng';
+import {toID} from '../../../sim/dex';
 
 export class RandomGen6Teams extends RandomGen7Teams {
 	constructor(format: Format | string, prng: PRNG | PRNGSeed | null) {
 		super(format, prng);
-		this.randomFactorySets = require('./factory-sets.json');
 	}
 
 	randomSet(species: string | Species, teamDetails: RandomTeamsTypes.TeamDetails = {}, isLead = false): RandomTeamsTypes.RandomSet {
@@ -19,7 +19,7 @@ export class RandomGen6Teams extends RandomGen7Teams {
 			forme = species.battleOnly;
 		}
 		if (species.cosmeticFormes) {
-			species = this.dex.getSpecies(this.sample([species.name].concat(species.cosmeticFormes)));
+			forme = this.sample([species.name].concat(species.cosmeticFormes));
 		}
 
 		const movePool = (species.randomBattleMoves || Object.keys(this.dex.data.Learnsets[species.id]!.learnset!)).slice();
@@ -759,8 +759,6 @@ export class RandomGen6Teams extends RandomGen7Teams {
 			item = 'Life Orb';
 		} else if (ability === 'Poison Heal') {
 			item = 'Toxic Orb';
-		} else if (hasMove['acrobatics']) {
-			item = 'Flying Gem';
 		} else if (ability === 'Unburden') {
 			if (hasMove['fakeout']) {
 				item = 'Normal Gem';
@@ -770,14 +768,9 @@ export class RandomGen6Teams extends RandomGen7Teams {
 				item = 'Sitrus Berry';
 			} else {
 				item = 'Red Card';
-				for (const moveid of moves) {
-					const move = this.dex.getMove(moveid);
-					if (hasType[move.type] && move.basePower >= 90) {
-						item = move.type + ' Gem';
-						break;
-					}
-				}
 			}
+		} else if (hasMove['acrobatics']) {
+			item = '';
 		} else if (hasMove['raindance']) {
 			item = (ability === 'Forecast') ? 'Damp Rock' : 'Life Orb';
 		} else if (hasMove['sunnyday']) {
@@ -899,6 +892,8 @@ export class RandomGen6Teams extends RandomGen7Teams {
 			shiny: this.randomChance(1, 1024),
 		};
 	}
+
+	randomFactorySets: AnyObject = require('./factory-sets.json');
 
 	randomFactorySet(species: Species, teamData: RandomTeamsTypes.FactoryTeamDetails, tier: string): RandomTeamsTypes.RandomFactorySet | null {
 		const id = toID(species.name);

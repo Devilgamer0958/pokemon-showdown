@@ -78,6 +78,14 @@ describe('Users features', function () {
 			});
 		});
 		describe('User', function () {
+			it('should store IP addresses after disconnect', () => {
+				const conn = new Connection('127.0.0.1');
+				const user = new User(conn);
+				assert.deepStrictEqual(['127.0.0.1'], user.ips);
+				user.onDisconnect(conn);
+				assert.deepStrictEqual(['127.0.0.1'], user.ips);
+			});
+
 			describe('#disconnectAll', function () {
 				for (const totalConnections of [1, 2]) {
 					it('should drop all ' + totalConnections + ' connection(s) and mark as inactive', function () {
@@ -136,14 +144,6 @@ describe('Users features', function () {
 					await Punishments.ban(users[0]);
 					assert.equal(users[1].connected, true);
 				});
-
-				it('should update IP count properly', async function () {
-					const user = new User();
-					await Punishments.ban(user);
-					for (const ip in user.ips) {
-						assert.equal(user.ips[ip], 0);
-					}
-				});
 			});
 
 			describe('#can', function () {
@@ -157,43 +157,29 @@ describe('Users features', function () {
 						if (room) room.destroy();
 					}
 				});
-				it(`should allow 's' permissions only on self`, function () {
-					const user = new User();
-					user.group = '+';
-					assert.equal(user.can('alts', user), true, 'targeting self');
-
-					const target = new User();
-					target.group = ' ';
-					assert.equal(user.can('alts', target), false, 'targeting lower rank');
-					target.group = '+';
-					assert.equal(user.can('alts', target), false, 'targeting same rank');
-					target.group = '%';
-					assert.equal(user.can('alts', target), false, 'targeting higher rank');
-				});
 				it(`should allow 'u' permissions on lower ranked users`, function () {
 					const user = new User();
-					user.group = '&';
-					assert.equal(user.can('promote', user), false, 'targeting self');
+					user.tempGroup = '@';
+					assert.equal(user.can('globalban', user), false, 'targeting self');
 
 					const target = new User();
-					target.group = ' ';
-					assert.equal(user.can('promote', target), true, 'targeting lower rank');
-					target.group = '&';
-					assert.equal(user.can('promote', target), false, 'targeting same rank');
-					target.group = '~';
-					assert.equal(user.can('promote', target), false, 'targeting higher rank');
+					target.tempGroup = ' ';
+					assert.equal(user.can('globalban', target), true, 'targeting lower rank');
+					target.tempGroup = '@';
+					assert.equal(user.can('globalban', target), false, 'targeting same rank');
+					target.tempGroup = '&';
+					assert.equal(user.can('globalban', target), false, 'targeting higher rank');
 				});
 				it(`should not allow users to demote themselves`, function () {
 					room = Rooms.createChatRoom("test");
-					if (!room.auth) room.auth = {};
 					const user = new User();
 					user.forceRename("User", true);
 					user.joinRoom(room);
 					for (const group of [' ', '+', '@']) {
-						room.auth[user.id] = group;
-						assert.equal(room.getAuth(user), group, 'before demotion attempt');
+						room.auth.set(user.id, group);
+						assert.equal(room.auth.get(user.id), group, 'before demotion attempt');
 						Chat.parse("/roomdeauth User", room, user, user.connections[0]);
-						assert.equal(room.getAuth(user), group, 'after demotion attempt');
+						assert.equal(room.auth.get(user.id), group, 'after demotion attempt');
 					}
 				});
 			});

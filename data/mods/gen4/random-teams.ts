@@ -1,6 +1,7 @@
 /* eslint max-len: ["error", 240] */
 
 import RandomGen5Teams from '../gen5/random-teams';
+import {toID} from '../../../sim/dex';
 
 export class RandomGen4Teams extends RandomGen5Teams {
 	randomSet(species: string | Species, teamDetails: RandomTeamsTypes.TeamDetails = {}, isLead = false): RandomTeamsTypes.RandomSet {
@@ -8,6 +9,10 @@ export class RandomGen4Teams extends RandomGen5Teams {
 		let forme = species.name;
 
 		if (species.battleOnly && species.battleOnly === 'string') forme = species.battleOnly;
+
+		if (species.cosmeticFormes) {
+			forme = this.sample([species.name].concat(species.cosmeticFormes));
+		}
 
 		const movePool = (species.randomBattleMoves || Object.keys(this.dex.data.Learnsets[species.id].learnset!)).slice();
 		const rejectedPool: string[] = [];
