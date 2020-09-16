@@ -1042,7 +1042,7 @@ export const Formats: FormatList = [
 				'LC Uber': 40,
 				'LC': 40,
 			};
-			const tier = this.toID(species.tier) || 'ou';
+			const tier = this.toID(species.tier) || 'OU';
 			if (!(tier in boosts)) return;
 			const pokemon: Species = this.dex.deepClone(species);
 			const boost = boosts[tier];
