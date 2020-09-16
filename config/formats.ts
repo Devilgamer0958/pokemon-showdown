@@ -294,7 +294,6 @@ export const Formats: FormatList = [
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3658504/">Doubles UU Metagame Discussion</a>`,
 		],
-		//hi
 		mod: 'gen8',
 		gameType: 'doubles',
 		ruleset: ['[Gen 8] Doubles OU'],
@@ -833,7 +832,7 @@ export const Formats: FormatList = [
 		restricted: ['Skiploom'],
 		onValidateTeam(team, format) {
 			const restrictedPokemon = format.restricted || [];
-			/**@type {{[k: string]: true}} */
+			/** @type {{[k: string]: true}} */
 			const itemTable = {};
 			for (const set of team) {
 				const item = this.dex.getItem(set.item);
