@@ -818,60 +818,60 @@ export const Formats: FormatList = [
 		},
 	},
 	{
-		name: "[PIDA] Mix and Mega",
-		desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3656469/">Mix and Mega</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3659028/">M&amp;M Resources</a>`,
-		],
+		{
+			name: "[PIDA] Mix and Mega",
+			desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
+			threads: [
+				`&bullet; <a href="https://www.smogon.com/forums/threads/3656469/">Mix and Mega</a>`,
+				`&bullet; <a href="https://www.smogon.com/forums/threads/3659028/">M&amp;M Resources</a>`,
+			],
 
-		mod: 'mixandmega',
-		ruleset: ['Standard NatDex', 'Species Clause', 'Dynamax Clause'],
-		banlist: ['Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
-		],
-		restricted: ['Skiploom'],
-		onValidateTeam(team, format) {
-			const restrictedPokemon = format.restricted || [];
-			/** @type {{[k: string]: true}} */
-			const itemTable = {};
-			for (const set of team) {
-				const item = this.dex.getItem(set.item);
-				if (!item || !item.megaStone) continue;
-				const species = this.dex.getSpecies(set.species);
-				if (restrictedPokemon.includes(species.name)) {
-					return [`${species.name} is not allowed to hold ${item.name}.`];
+			mod: 'mixandmega',
+			ruleset: ['Standard NatDex', 'Species Clause', 'Nickname Clause', 'Endless Battle Clause'],
+			banlist: [
+				'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
+			],
+			onValidateTeam(team) {
+				const itemTable = new Set<ID>();
+				for (const set of team) {
+					const item = this.dex.getItem(set.item);
+					if (!item || !item.megaStone) continue;
+					const species = this.dex.getSpecies(set.species);
+					if (species.isNonstandard) return [`${species.baseSpecies} does not exist in gen 8.`];
+					if (this.ruleTable.isRestrictedSpecies(species)) {
+						return [`${species.name} is not allowed to hold ${item.name}.`];
+					}
+					if (itemTable.has(item.id)) {
+						return [`You are limited to one of each mega stone.`, `(You have more than one ${item.name})`];
+					}
+					itemTable.add(item.id);
 				}
-				if (itemTable.has(item.id)) {
-					return [`You are limited to one of each mega stone.`, `(You have more than one ${item.name})`];
+			},
+			onBegin() {
+				for (const pokemon of this.getAllPokemon()) {
+					pokemon.m.originalSpecies = pokemon.baseSpecies.name;
 				}
-				itemTable.add(item.id);
-			}
-		},
-		onBegin() {
-			for (const pokemon of this.getAllPokemon()) {
-				pokemon.m.originalSpecies = pokemon.baseSpecies.name;
-			}
-		},
-		onSwitchIn(pokemon) {
-			// @ts-ignore
-			const oMegaSpecies = this.dex.getSpecies(pokemon.species.originalMega);
-			if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
-				// Place volatiles on the Pokémon to show its mega-evolved condition and details
-				this.add('-start', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
-				const oSpecies = this.dex.getSpecies(pokemon.m.originalSpecies);
-				if (oSpecies.types.length !== pokemon.species.types.length || oSpecies.types[1] !== pokemon.species.types[1]) {
-					this.add('-start', pokemon, 'typechange', pokemon.species.types.join('/'), '[silent]');
+			},
+			onSwitchIn(pokemon) {
+				// @ts-ignore
+				const oMegaSpecies = this.dex.getSpecies(pokemon.species.originalMega);
+				if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
+					// Place volatiles on the Pokémon to show its mega-evolved condition and details
+					this.add('-start', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
+					const oSpecies = this.dex.getSpecies(pokemon.m.originalSpecies);
+					if (oSpecies.types.length !== pokemon.species.types.length || oSpecies.types[1] !== pokemon.species.types[1]) {
+						this.add('-start', pokemon, 'typechange', pokemon.species.types.join('/'), '[silent]');
+					}
 				}
-			}
+			},
+			onSwitchOut(pokemon) {
+				// @ts-ignore
+				const oMegaSpecies = this.dex.getSpecies(pokemon.species.originalMega);
+				if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
+					this.add('-end', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
+				}
+			},
 		},
-		onSwitchOut(pokemon) {
-			// @ts-ignore
-			const oMegaSpecies = this.dex.getSpecies(pokemon.species.originalMega);
-			if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
-				this.add('-end', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
-			}
-		},
-	},
 	{
 		name: "[PIDA] Almost Any Ability",
 		desc: `Pok&eacute;mon have access to almost any ability.`,
