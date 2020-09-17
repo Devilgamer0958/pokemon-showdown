@@ -1029,7 +1029,7 @@ export const Formats: FormatList = [
 		onModifySpecies(species, target, source, effect) {
 			if (!species.baseStats) return false;
 			/** @type {{[tier: string]: number}} */
-			const boosts = {
+			const boosts: {[tier: string]: number} = {
 				'Uber': -10,
 				'UU': 10,
 				'RUBL': 10,
@@ -1042,7 +1042,7 @@ export const Formats: FormatList = [
 				'LC Uber': 40,
 				'LC': 40,
 			};
-			const tier = this.toID(species.tier) || 'OU';
+			const tier = this.toID(species.tier) || 'ou';
 			if (!(tier in boosts)) return;
 			const pokemon: Species = this.dex.deepClone(species);
 			const boost = boosts[tier];
