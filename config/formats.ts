@@ -276,7 +276,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen8',
 		gameType: 'doubles',
-		ruleset: ['Standard NatDex Doubles'],
+		ruleset: ['Standard NatDex'],
 	},
 	{
 		name: "[Gen 8] Doubles Ubers",
