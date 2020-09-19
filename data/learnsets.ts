@@ -26510,6 +26510,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			rollout: ["7V", "4T", "3T"],
 			round: ["7M", "6M", "5M"],
 			sandstorm: ["7M", "6M", "5M", "4M", "3M"],
+			scorchingsands:["7M", "6M", "5M", "4M", "3M"],
 			secretpower: ["6M", "4M", "3M"],
 			selfdestruct: ["3T"],
 			shellsmash: ["7L1", "6L38", "5L38"],
@@ -71264,7 +71265,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			voltswitch: ["8M", "7M"],
 			zapcannon: ["8L84"],
 			zenheadbutt: ["8M", "7T"],
-			scorchingsands: ["8M", "7T"],
 		},
 		eventData: [
 			{generation: 7, level: 50, moves: ["fleurcannon", "flashcannon", "luckychant", "helpinghand"], pokeball: "cherishball"},
