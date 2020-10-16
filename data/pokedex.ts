@@ -195,7 +195,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	blastoise: {
 		num: 9,
 		name: "Blastoise",
-		types: ["Water"],
+		types: ["Water", "Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
 		abilities: {0: "Torrent", H: "Rain Dish"},
@@ -214,7 +214,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Blastoise-Mega",
 		baseSpecies: "Blastoise",
 		forme: "Mega",
-		types: ["Water"],
+		types: ["Water", "Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 79, atk: 103, def: 120, spa: 135, spd: 115, spe: 78},
 		abilities: {0: "Mega Launcher"},
@@ -4240,7 +4240,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	houndoom: {
 		num: 229,
 		name: "Houndoom",
-		types: ["Dark", "Fire"],
+		types: ["Dark", "Ghost"],
 		baseStats: {hp: 75, atk: 90, def: 50, spa: 110, spd: 80, spe: 95},
 		abilities: {0: "Early Bird", 1: "Flash Fire", H: "Unnerve"},
 		heightm: 1.4,
@@ -4257,7 +4257,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Houndoom-Mega",
 		baseSpecies: "Houndoom",
 		forme: "Mega",
-		types: ["Dark", "Fire"],
+		types: ["Dark", "Ghost"],
 		baseStats: {hp: 75, atk: 90, def: 90, spa: 140, spd: 90, spe: 115},
 		abilities: {0: "Solar Power"},
 		heightm: 1.9,
@@ -5879,7 +5879,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	seviper: {
 		num: 336,
 		name: "Seviper",
-		types: ["Poison"],
+		types: ["Steel", "Bug"],
 		baseStats: {hp: 73, atk: 100, def: 60, spa: 100, spd: 60, spe: 65},
 		abilities: {0: "Shed Skin", H: "Infiltrator"},
 		heightm: 2.7,
@@ -8080,7 +8080,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	gallade: {
 		num: 475,
 		name: "Gallade",
-		types: ["Psychic", "Fighting"],
+		types: ["Fire", "Grass"],
 		gender: "M",
 		baseStats: {hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80},
 		abilities: {0: "Steadfast", H: "Justified"},
@@ -11183,7 +11183,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	greninja: {
 		num: 658,
 		name: "Greninja",
-		types: ["Water", "Dark"],
+		types: ["Water", "Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122},
 		abilities: {0: "Torrent", H: "Protean", S: "Battle Bond"},
@@ -11600,7 +11600,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	doublade: {
 		num: 680,
 		name: "Doublade",
-		types: ["Steel", "Ghost"],
+		types: ["Fighting", "Ghost"],
 		baseStats: {hp: 59, atk: 110, def: 150, spa: 45, spd: 49, spe: 35},
 		abilities: {0: "No Guard"},
 		heightm: 0.8,
@@ -12324,7 +12324,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	volcanion: {
 		num: 721,
 		name: "Volcanion",
-		types: ["Fire", "Water"],
+		types: ["Ground", "Water"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 110, def: 120, spa: 130, spd: 90, spe: 70},
 		abilities: {0: "Water Absorb"},
@@ -13537,7 +13537,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	togedemaru: {
 		num: 777,
 		name: "Togedemaru",
-		types: ["Electric", "Steel"],
+		types: ["Flying", "Steel"],
 		baseStats: {hp: 65, atk: 98, def: 63, spa: 40, spd: 73, spe: 96},
 		abilities: {0: "Iron Barbs", 1: "Lightning Rod", H: "Sturdy"},
 		heightm: 0.3,
