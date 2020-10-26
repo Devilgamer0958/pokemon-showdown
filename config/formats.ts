@@ -1025,6 +1025,7 @@ export const Formats: FormatList = [
 		searchShow: false,
 		ruleset: ['Standard NatDex'],
 		banlist: ['Damp Rock', 'Heat Rock', 'Eviolite'],
+		onModifySpecies() {
 			if (!species.baseStats) return false;
 			/** @type {{[tier: string]: number}} */
 			const boosts: {[tier: string]: number} = {
