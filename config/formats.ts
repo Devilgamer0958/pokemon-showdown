@@ -831,7 +831,7 @@ export const Formats: FormatList = [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 		],
 		restricted: [
-			'Weedle'
+			'Weedle',
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
