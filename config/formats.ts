@@ -826,7 +826,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'mixandmega',
-		ruleset: ['Standard NatDex', 'Species Clause', 'Nickname Clause', 'Endless Battle Clause'],
+		ruleset: ['Standard NatDex', 'Endless Battle Clause'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 		],
@@ -1025,7 +1025,6 @@ export const Formats: FormatList = [
 		searchShow: false,
 		ruleset: ['Standard NatDex'],
 		banlist: ['Damp Rock', 'Heat Rock', 'Eviolite'],
-		onModifySpecies(species, target, source, effect) {
 			if (!species.baseStats) return false;
 			/** @type {{[tier: string]: number}} */
 			const boosts: {[tier: string]: number} = {
