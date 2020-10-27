@@ -901,7 +901,7 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex', 'STABmons Move Legality', 'Species Clause'],
 		banlist: ['King\'s Rock', 'Moody', 'Shadow Tag', 'Baton Pass',
 		],
-		restricted: ['Acupressure', 'Belly Drum', 'Bolt Beak', 'Double Iron Bash', 'Electrify', 'Extreme Speed', 'Fishious Rend', 'Shell Smash', 'Shift Gear', 'Spore'],
+		restricted: ['Acupressure', 'Belly Drum', 'Geomancy', 'Chatter', 'Lovely Kiss', 'Extreme Speed', 'Shell Smash', 'Shift Gear', 'Spore', 'Thousand Arrows'],
 	},
 	{
 		name: "[Gen 8] NFE",
