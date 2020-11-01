@@ -1045,8 +1045,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	scizormega: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "OU",
 	},
 	smoochum: {
 		isNonstandard: "Past",
@@ -1344,8 +1343,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	meganium: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "PU",
 	},
 	cyndaquil: {
 		isNonstandard: "Past",
@@ -2020,8 +2018,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	slaking: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "PU",
 	},
 	nincada: {
 		tier: "LC",
@@ -2273,12 +2270,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	altaria: {
 		randomBattleMoves: ["defog", "dracometeor", "earthquake", "fireblast", "roost", "toxic"],
 		randomBattleLevel: 88,
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	altariamega: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	zangoose: {
 		isNonstandard: "Past",
@@ -2524,8 +2519,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 	},
 	metagrossmega: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "Uber",
 	},
 	regirock: {
 		randomBattleMoves: ["bodypress", "curse", "earthquake", "explosion", "rest", "rockslide", "stoneedge"],
@@ -2658,8 +2652,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	bibarel: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "PU",
 	},
 	kricketot: {
 		isNonstandard: "Past",
@@ -3337,8 +3330,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	leavanny: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "PU",
 	},
 	venipede: {
 		tier: "LC",
@@ -3604,8 +3596,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	sawsbuck: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "PU",
 	},
 	emolga: {
 		randomBattleMoves: ["encore", "energyball", "roost", "thunderbolt", "toxic", "uturn"],
@@ -3969,8 +3960,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	landorustherian: {
 		randomBattleMoves: ["defog", "earthquake", "fly", "stealthrock", "stoneedge", "swordsdance", "uturn"],
 		randomBattleLevel: 80,
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "OU",
 	},
 	kyurem: {
 		randomBattleMoves: ["dracometeor", "earthpower", "freezedry", "icebeam", "roost", "substitute"],
